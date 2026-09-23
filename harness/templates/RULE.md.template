@@ -48,6 +48,13 @@ form: "When X, the system shall Y, because Z."
   or violate blindly when it hits a case you did not foresee
 
 Do not omit any of the three parts.
+
+Example:
+
+When publishing a domain event to Kafka, the system shall replace
+the citizen ID with a pseudonymous citizenRef at the publish
+boundary, because PII must not leave the transactional store into
+the broader-access data lake (ADR 0002).
 -->
 
 When {trigger condition}, the system shall {constraint}, because
