@@ -1,0 +1,107 @@
+<!--
+AGENTS.md template
+==================
+
+This template lists the sections a well-formed AGENTS.md carries and
+what belongs in each. Sections marked (mandatory) must be filled;
+sections marked (optional) can be skipped if genuinely not needed for
+your domain.
+
+Keep the whole file under 200 lines. If a section is getting long,
+that content probably belongs in a linked reference document (ADR,
+skill, or dedicated doc), not inline here.
+
+Read the ADRs in docs/adr/ before filling this in. Anything they
+already cover does not need to be repeated here; link to them.
+-->
+
+# {Domain or repo name}
+
+<!--
+One-paragraph project overview (mandatory).
+What this codebase or domain is, in one paragraph the agent reads on
+every task. Name the runtime, the framework version, and the primary
+integration points. Do not describe the business logic here; that
+belongs in the domain README.
+-->
+
+Placeholder overview paragraph goes here.
+
+## Setup commands
+<!--
+Mandatory. The exact commands the agent needs to install
+dependencies, run the app, run tests, and check types. Copy-pasteable,
+no shell variables the agent has to guess.
+-->
+
+- Install: `...`
+- Test: `...`
+- Lint: `...`
+- Type check: `...`
+- Verify: `./verify.sh`
+
+## Testing
+<!--
+Mandatory. Where tests live, how to run one file, what conventions
+apply. If you have tiers of tests (unit, integration, e2e), name
+which command runs which.
+-->
+
+## What done means
+<!--
+Mandatory. A change is done when [specific conditions]. This is what
+stops the agent from claiming completion prematurely.
+-->
+
+## Project structure
+<!--
+Mandatory. A map of the important folders and what belongs in each.
+Do not restate what's obvious from `ls`; describe the intent behind
+the layout.
+-->
+
+## Architecture
+<!--
+Mandatory. Point at docs/adr/ and name the load-bearing ADRs.
+Include only the two or three architectural facts that apply on
+almost every task; anything task-specific belongs in the ADR itself.
+Never contradict an ADR here; if the ADR is wrong, supersede it.
+-->
+
+The standing decisions live in `docs/adr/`. Read
+`docs/adr/README.md` first to find the ADRs whose `touches` matches
+your task, then read those in full. The always-on constraints:
+
+- ...
+- ...
+
+## Security
+<!--
+Optional but recommended. Where secrets live, how they are injected,
+what data must not appear in logs, what auth flows exist. Skip only
+if your domain genuinely has no security-adjacent concerns, which is
+rare.
+-->
+
+## Code style
+<!--
+Mandatory. Only the deltas from language and framework defaults. Do
+not restate what a linter already enforces; name the choices that
+differ from what a reader would expect.
+-->
+
+## Git workflow
+<!--
+Mandatory. Branch conventions, commit message expectations, what
+must not be pushed directly.
+-->
+
+## Boundaries
+<!--
+Mandatory. What the agent must not do here. Things that would compile
+and pass tests but would violate the design.
+-->
+
+- Never ...
+- Never ...
+- Never ...

@@ -1,0 +1,96 @@
+---
+# Frontmatter (mandatory fields: name, description)
+name: your-skill-name-in-kebab-case
+description: One line in the third person, saying what the skill does and when to use it. Include trigger phrases the agent will encounter (verbs, nouns, common phrasings) so it activates at the right moment. Do not exceed 1024 characters. Include an explicit "Does not activate for..." clause to reduce false positives.
+
+# Optional frontmatter fields (skip if not needed)
+# license: MIT
+# compatibility: Requires Java 17, Maven
+# metadata:
+#   author: your-team
+#   version: "1.0"
+---
+
+<!--
+SKILL.md template
+=================
+
+Skills are workflows: they have steps, examples, and edge cases. If
+what you are describing has no steps, it is a rule, not a skill;
+put it in harness/rules/ instead.
+
+The body should stay under 500 lines. If it is getting longer, move
+detail into files under references/ and link to them from here.
+Reference files over 100 lines should open with a ## Contents section.
+
+The four sections below are all mandatory. Skipping any of them
+weakens the skill's ability to trigger correctly and produce the
+right work.
+-->
+
+# {Skill display name matching the frontmatter name}
+
+## When to use this skill
+<!--
+Mandatory. Disambiguate this skill from any sibling skills. When
+should the agent pick this one specifically? When should it pick a
+different one instead?
+-->
+
+## Instructions
+<!--
+Mandatory. Numbered steps the agent follows. For any multi-step
+workflow, use a copyable checklist at the top so the agent ticks off
+progress. Point at scripts under scripts/ for anything deterministic;
+point at references/ for anything the agent needs to read in full.
+
+If a step involves validation, include a validate-fix-repeat loop:
+run the validator, fix errors, re-run, and only proceed on pass.
+-->
+
+Copy this checklist and tick each step as you complete it:
+
+- [ ] Step 1: ...
+- [ ] Step 2: ...
+- [ ] Step 3: ...
+
+**Step 1: {name}**
+
+{Description of what happens in this step}
+
+**Step 2: {name}**
+
+...
+
+## Examples
+<!--
+Mandatory. At least two concrete input-output pairs. Show the shape
+of a request the agent would receive and the shape of the output it
+should produce. Include a "tempting wrong version" example that
+names a common mistake and shows why it is wrong; this is worth more
+than three additional right examples.
+-->
+
+**Example 1: {short name}**
+
+Input: ...
+
+Output: ...
+
+**Example 2: {short name, ideally covering an edge case}**
+
+Input: ...
+
+Output: ...
+
+## Common edge cases
+<!--
+Mandatory. Three or four situations the instructions above do not
+explicitly cover, and what the agent should do in each. This is
+where you capture the "gotchas" that would otherwise trip an agent
+into producing wrong work.
+-->
+
+- **{Edge case name}**: {what the agent should do}
+- **{Edge case name}**: {what the agent should do}
+- **{Edge case name}**: {what the agent should do}
