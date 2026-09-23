@@ -35,7 +35,7 @@ agent working on this codebase.
 
 ## What you will produce
 
-Working as a group of three to five, for two hours:
+Working as a group of three to five:
 
 1. **One root `AGENTS.md`** at the repo root, orienting an agent
    who arrives at the codebase for the first time
@@ -48,7 +48,7 @@ Working as a group of three to five, for two hours:
    scenario. Pick something that spans more than one domain if you
    can; that will make the sharing conversation richer
 
-## How to spend the two hours
+## How to spend your time
 
 - **10 minutes**: read the materials together (this README, the
   three ADRs, the four domain READMEs, the two templates)
@@ -61,7 +61,7 @@ Working as a group of three to five, for two hours:
   repeat the ADRs? Does the skill have steps, or is it a rule in
   disguise? Would a colleague joining today find these useful?
 
-## After the two hours
+## After you finish
 
 Each group presents in three minutes, structured as:
 
