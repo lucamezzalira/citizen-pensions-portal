@@ -1,0 +1,83 @@
+---
+# Frontmatter
+# Mandatory: description
+# Mandatory: exactly one of `globs` or `alwaysApply: true`
+
+description: One line in the third person, stating what the rule ensures rather than what it forbids. Describe the positive outcome the rule guarantees.
+
+# Use `globs` when the rule only applies inside specific paths.
+# Delete this line and uncomment `alwaysApply` below when the rule
+# applies repo-wide. Never set both.
+globs: services/example/**/*.java
+
+# alwaysApply: true
+---
+
+<!--
+RULE.md template
+================
+
+A rule is a constraint the agent must respect, together with the
+reason it exists. If what you are writing has steps, it is a skill,
+not a rule; use SKILL.md.template instead.
+
+Keep rules single-purpose. One constraint per file. A rule whose
+title uses "and" is usually two rules bundled together and should
+be split.
+
+Keep the body under 100 lines. If it is longer, you probably have
+more than one rule and should split before doing anything else.
+
+The three body sections below are all mandatory. Every one of them
+carries specific weight; skipping any weakens the rule to the point
+where it stops working.
+-->
+
+# {Short imperative restating the rule}
+
+<!--
+Mandatory. The first paragraph must be a single sentence in EARS
+form: "When X, the system shall Y, because Z."
+
+- "When X" is the trigger. Without it, the agent cannot tell which
+  situations the rule applies to
+- "The system shall Y" is the constraint. "Shall" is deliberately
+  archaic; it distinguishes a normative statement from "may",
+  "should", or "will"
+- "Because Z" is the reason. Without it, the agent must obey blindly
+  or violate blindly when it hits a case you did not foresee
+
+Do not omit any of the three parts.
+-->
+
+When {trigger condition}, the system shall {constraint}, because
+{reason the constraint matters}.
+
+## Signals of violation
+<!--
+Mandatory. Concrete things a reviewer looking at a diff would see.
+Each bullet describes what the reviewer would spot in the code.
+Vague signals like "code that looks wrong" defeat the purpose;
+the goal is a list an automated reviewer or a junior contributor
+could apply mechanically.
+
+At least two bullets. A single signal is usually a symptom of a
+broader pattern that deserves naming as its own bullet.
+-->
+
+- {Concrete observable signal in the code}
+- {Concrete observable signal in the code}
+
+## How to satisfy it
+<!--
+Mandatory. The pattern that makes the code conform to the rule. If
+a helper, wrapper, or utility exists that satisfies the rule, name
+it and say where it lives. If the pattern is inline, show a two
+or three line snippet.
+
+"Just don't do the wrong thing" is not actionable and does not
+count. The section must tell the agent what to do instead.
+-->
+
+{Description of the pattern that satisfies the rule, or the name
+and location of the helper that does.}

@@ -31,6 +31,9 @@ agent working on this codebase.
   AGENTS.md file, with commented sections telling you what belongs
   where and which sections are mandatory
 - `harness/templates/SKILL.md.template` is the same for a skill
+- `harness/templates/RULE.md.template` is the same for a rule, which
+  captures a constraint the agent must respect together with the
+  reason it exists
 - `mock/citizen-portal-wireframes.pdf` shows what the citizen sees
 
 ## What you will produce
@@ -47,6 +50,11 @@ Working as a group of three to five:
    describing a workflow you decide is worth capturing based on the
    scenario. Pick something that spans more than one domain if you
    can; that will make the sharing conversation richer
+4. **Optionally, one or more rules** under `harness/rules/{rule-name}.md`,
+   for any constraint you decide must always hold within a specific
+   area of the code. A rule is not the same shape as a skill; if
+   what you are capturing has steps, it belongs in a skill, and if
+   it is a constraint plus its reason, it belongs in a rule.
 
 ## How to spend your time
 
@@ -54,8 +62,9 @@ Working as a group of three to five:
   three ADRs, the four domain READMEs, the two templates)
 - **15 minutes**: discuss and decide. What stays in the root
   AGENTS.md and what belongs in each domain file? Which skill are
-  you writing? What are the ADRs already covering that you should
-  not repeat?
+  you writing, and are there any rules worth capturing alongside
+  it? What are the ADRs already covering that you should not
+  repeat?
 - **50 minutes**: write
 - **15 minutes**: self-review. Does anything in your AGENTS.md files
   repeat the ADRs? Does the skill have steps, or is it a rule in
