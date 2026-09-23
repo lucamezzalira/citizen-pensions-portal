@@ -56,20 +56,6 @@ Working as a group of three to five:
    what you are capturing has steps, it belongs in a skill, and if
    it is a constraint plus its reason, it belongs in a rule.
 
-## How to spend your time
-
-- **10 minutes**: read the materials together (this README, the
-  three ADRs, the four domain READMEs, the two templates)
-- **15 minutes**: discuss and decide. What stays in the root
-  AGENTS.md and what belongs in each domain file? Which skill are
-  you writing, and are there any rules worth capturing alongside
-  it? What are the ADRs already covering that you should not
-  repeat?
-- **50 minutes**: write
-- **15 minutes**: self-review. Does anything in your AGENTS.md files
-  repeat the ADRs? Does the skill have steps, or is it a rule in
-  disguise? Would a colleague joining today find these useful?
-
 ## After you finish
 
 Each group presents in three minutes, structured as:
